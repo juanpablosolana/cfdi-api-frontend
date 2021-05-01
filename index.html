@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de CFDI </title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper-menu">
+      <div class="menu">
+        <h1>Notas de entrada</h1>
+        <!-- <nav>
+          <ul>
+            <li>Inicio</li>
+            <li>Buscar</li>
+            <li>Agregar</li>
+          </ul>
+        </nav> -->
+        <form action="" id="search-form">
+          <input placeholder="Escanear QR" name="search" type="text">
+          <button>Buscar</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <section class="cfdi-list" id ="container">
+      <section class="factura">
+        <br>
+        <br>
+        <div class="spinner"></div>
+        <p>La primera carga del sistema puede demorar unos instantes, por favor espere ...</p>
+        <!-- <h2>Factura</h2>
+          <p class="Seire">Seire</p>
+          <p class="Folio">Folio</p>
+          <p class="Lugar">Lugar</p>
+          <p class="CertificadoCsd">CertificadoCsd</p>
+          <p class="CertificadoSat">CertificadoSat</p>
+          <p class="FolioSat">FolioSat</p>
+          <p class="FechaCertificacion">FechaCertificacion</p>
+          <p class="FechaEmision">FechaEmision</p>
+          <p class="Comprobante">Comprobante</p> -->
+        </section>
+      </section>
+      <section class="cfdi-list-save">
+        <form action="" id="save-form">
+          <p class="selected">Folio seleccionado</p>
+          <button>Entrada</button>
+        </form>
+
+    </section>
+  </div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
