@@ -20,7 +20,6 @@ function buildElement({
    ... rest
 })
    {
-  console.log(rest.timbreFiscal.uuid)
   const template=
   `
   <details >
@@ -65,7 +64,6 @@ function buildElement({
     </section>
   </details>
   `
-  // debugger
   const cfdi=document.createElement('div')
   cfdi.innerHTML=template
   return cfdi
