@@ -9,9 +9,8 @@ const api = 'https://cfdi-json.herokuapp.com/api/v1'
   .catch(err=>{console.log(err)})
 }
 
-const searchBtn = window['search-form']
-// searchBtn.focus()
-searchBtn.addEventListener('submit', async function (event) {
+  const searchBtn = window['search-form']
+  searchBtn.addEventListener('submit', async function (event) {
   event.preventDefault()
   const formData = new FormData(this)
   const folio = formData.get('search')
@@ -19,16 +18,13 @@ searchBtn.addEventListener('submit', async function (event) {
   if(folio===''){
     const cfdi = await filterByFolio(folio)
     render(cfdi)
-    // console.log('render')
   }else{
-
     let newFolio=folio.substr(67,36)
     newFolio=newFolio.replace("'", "-")
     newFolio=newFolio.replace("'", "-")
     newFolio=newFolio.replace("'", "-")
     newFolio=newFolio.replace("'", "-")
     const cfdi = await filterByFolio(newFolio)
-    // console.log(cfdi)
     cfdi.length === 0 ? alert('CFDI no encontrado') : render(cfdi)
   }
 })
